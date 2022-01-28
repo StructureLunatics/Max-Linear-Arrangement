@@ -4,13 +4,14 @@
 
 // uncomment or add what you need
 
-// #include <vector>
-// #include "graph.hpp"
+#include <vector>
+#include "graph.hpp"
 
-// using namespace std;
+using namespace std;
 
-
-// add below the headers of the functions that this part of the program provides (the header + code of these function must be provided in the .cpp file).
+graph ReadGraph();
+vector <int> GraphPos(int v);
+int ComputeD(graph g, vector<int> pi);
 
 #endif
 

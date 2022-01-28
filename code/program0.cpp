@@ -15,6 +15,8 @@ int main()
     cout << "The graph has " << g.vertices() << " vertices and " << g.edges() << " edges" << endl;     
     // we will write the edges to the standard output
     cout << "The edges are " << endl;
+
+    // Iterate edges:
     for (auto i = g.begin(); i != g.end(); ++i) {
         cout << i->first << " " << i->second << endl;
     }
