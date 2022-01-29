@@ -1,15 +1,5 @@
 // uncomment or add what you need
-
-// #include <iostream>
-// #include <algorithm>
-
-#include "graph_utilities.hpp"
-
-// using namespace std;
-
 // add below the implementation (header + code) of the functions described in the .hpp file. 
-
-// uncomment or add what you need
 
 #include <iostream>
 #include <algorithm>
@@ -57,6 +47,7 @@ vector <int> GraphPos(int v){
     // Read vertex from stdin
     int v;
     cin >> v;
+    pi.push_back(v);
   }
   // Return vector vith ordered vertices
   return pi;
@@ -65,9 +56,10 @@ vector <int> GraphPos(int v){
 // [Compute D taking two params (vertices) method]
 // Inputs: graph g, vector pi
 // Outputs: Max distance
-int ComputeD(graph g, vector<int>& pi){
+int ComputeD(graph g, vector<int> pi){
   int D = 0;
   for (auto i = g.begin(); i != g.end(); ++i) {
     D += abs(find(pi.begin(), pi.end(), i->first) - find(pi.begin(), pi.end(), i->second));
+    }
   return D;
 }
