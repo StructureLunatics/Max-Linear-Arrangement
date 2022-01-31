@@ -2,8 +2,6 @@
 
 #define _MY_GRAPH_UTILITIES_
 
-// uncomment or add what you need
-
 #include <vector>
 #include "graph.hpp"
 
