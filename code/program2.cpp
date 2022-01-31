@@ -18,24 +18,25 @@ cin >> numG;
 vector<int> Dvalues;
 
 for(int i = 0; i < numG; i++){
-    // Call read graph input method
+    // Declare graph object
     graph g;
+    // Call ReadGraph function
     g = ReadGraph();
 
-    // Call pi creation to create the vector storing the vertices order
+    // Declaring vector pi with size = number of vertices
     vector <int> pi(g.vertices());
-    // fills the pi vector from 0 to N-1
+    // Filling vector pi from 0 to N-1
     iota(pi.begin(), pi.end(), 0);
 
     // Call compute D taking two params (vertices) method
     int D;
     D = ComputeD(g, pi);
 
-    // Insert the D value inside the 
+    // Insert the D value inside Dvalues vector
     Dvalues.push_back(D);
 }
 
-// Printing output D values
+// Printing D values to standard output
 for(auto i: Dvalues){
     cout << i << endl;
 }

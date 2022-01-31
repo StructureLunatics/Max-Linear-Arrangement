@@ -7,20 +7,20 @@
 using namespace std;
 
 /*
-    
+    Input: single graph, position of the vertices
     Output: D value
 */
 int main()
 {
-    // Call read graph input method
+    // Call Read graph function
     graph g;
     g = ReadGraph();
 
-    // Call read vector with lin arrangment (pi) method
+    // Call GraphPos function
     vector <int> pi;
     pi = GraphPos(g.vertices());
 
-    // Call compute D taking two params (vertices) method
+    // Call Compute D function taking two a graph and vector pi as parameters
     int D;
     D = ComputeD(g, pi);
 
