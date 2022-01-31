@@ -36,6 +36,9 @@ for(int i = 0; i < numG; i++){
 }
 
 // Printing output D values
-for(auto i: Dvalues){cout << i << endl;}
+for(auto i: Dvalues){
+    cout << i << endl;
+}
+
 return 0;
 }
