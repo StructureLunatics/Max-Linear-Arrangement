@@ -42,6 +42,7 @@ graph ReadGraph(){
 // Output: Pi vector
 vector <int> GraphPos(int v){
   vector <int> pi;
+
   // iterate v(number of vertices) times
   for(int i = 0; i < v; i++){
     // Read vertex from stdin
@@ -49,6 +50,7 @@ vector <int> GraphPos(int v){
     cin >> v;
     pi.push_back(v);
   }
+  
   // Return vector vith ordered vertices
   return pi;
 }
@@ -58,8 +60,10 @@ vector <int> GraphPos(int v){
 // Outputs: Max distance
 int ComputeD(graph g, vector<int> pi){
   int D = 0;
+
   for (auto i = g.begin(); i != g.end(); ++i) {
     D += abs(find(pi.begin(), pi.end(), i->first) - find(pi.begin(), pi.end(), i->second));
     }
+
   return D;
 }

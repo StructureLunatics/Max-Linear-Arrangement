@@ -7,7 +7,7 @@ program1: program1.cpp graph.cpp graph.hpp graph_utilities.hpp
 program2: program2.cpp graph.cpp graph.hpp graph_utilities.hpp
 	g++ -O3 -D_GLIBCXX_DEBUG -Wall -o program2.x program2.cpp graph.cpp graph_utilities.cpp
 
-program3: program3.cpp graph.cpp graph.hpp graph_utilities.hpp
+program3: program3.cpraph.cpp graph.hpp graph_utilities.hpp
 	g++ -O3 -D_GLIBCXX_DEBUG -Wall -o program3.x program3.cpp graph.cpp graph_utilities.cpp
 
 program4: program4.cpp graph.cpp graph.hpp graph_utilities.hpp
