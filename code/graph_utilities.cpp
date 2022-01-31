@@ -12,14 +12,14 @@ graph ReadGraph(){
     graph g;
   
     // Read n (vertices number) and m (edge number)
-    int v;
-    int e;
-    cin>>v>>e;
+    int n;
+    int m;
+    cin >> n >> m;
 
-    g.setup(v); // it creates a graph of v vertices
+    g.setup(n); // it creates a graph of v vertices
 
     // Iterating e(number of edges) times
-    for(int i = 0; i < e; i++){
+    for(int i = 0; i < m; i++){
         // Declare empty edge pair
         pair<int, int> edge;
         // Read from standard input
@@ -59,6 +59,6 @@ int ComputeD(graph g, vector<int> pi){
     for (auto i = g.begin(); i != g.end(); ++i){
         D += abs(pi.at(i->first) - pi.at(i->second));
     }
-
+    
     return D;
 }

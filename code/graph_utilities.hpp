@@ -8,7 +8,7 @@
 using namespace std;
 
 graph ReadGraph();
-vector <int> GraphPos(int v);
+vector<int> GraphPos(int v);
 int ComputeD(graph g, vector<int> pi);
 
 #endif

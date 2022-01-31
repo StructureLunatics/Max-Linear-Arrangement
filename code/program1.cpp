@@ -7,8 +7,8 @@
 using namespace std;
 
 /*  PROGRAM 1
-
-    Input: single graph, position of the vertices
+    ---------
+    Input: single graph, position of the vertices.
     Output: D value
 */
 
@@ -19,7 +19,7 @@ int main()
     g = ReadGraph();
 
     // Call GraphPos function
-    vector <int> pi;
+    vector<int> pi;
     pi = GraphPos(g.vertices());
 
     // Call Compute D function taking two a graph and vector pi as parameters

@@ -8,7 +8,7 @@
 using namespace std;
 
 /*  PROGRAM 2
-
+    ---------
     Input:  various graphs
     Output: value of D for each of them (vertex labels are interpreted as vertex positions).
 */
@@ -20,7 +20,7 @@ int numG;
 cin >> numG;
 
 // Initializing a vector to store the Ds
-vector<int> Dvalues;
+vector<int> Dmax_v;
 
 for(int i = 0; i < numG; i++){
     // Declare graph object
@@ -38,11 +38,11 @@ for(int i = 0; i < numG; i++){
     D = ComputeD(g, pi);
 
     // Insert the D value inside Dvalues vector
-    Dvalues.push_back(D);
+    Dmax_v.push_back(D);
 }
 
-// Printing D values to standard output
-for(auto i: Dvalues){
+// Printing D values to standard output.
+for(auto i: Dmax_v){
     cout << i << endl;
 }
 
