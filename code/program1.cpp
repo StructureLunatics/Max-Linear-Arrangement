@@ -6,10 +6,12 @@
 
 using namespace std;
 
-/*
+/*  PROGRAM 1
+
     Input: single graph, position of the vertices
     Output: D value
 */
+
 int main()
 {
     // Call Read graph function

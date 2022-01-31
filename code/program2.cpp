@@ -7,6 +7,11 @@
 
 using namespace std;
 
+/*  PROGRAM 2
+
+    Input:  various graphs
+    Output: value of D for each of them (vertex labels are interpreted as vertex positions).
+*/
 
 int main()
 {

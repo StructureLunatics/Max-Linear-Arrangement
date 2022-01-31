@@ -20,4 +20,3 @@ all: program0 program1 program2 program3 program4 program5
 
 clean: 
 	rm -f program0.x program1.x program2.x program3.x program4.x program5.x
-

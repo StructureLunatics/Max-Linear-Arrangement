@@ -12,7 +12,7 @@ using namespace std;
     Input: various graphs
     Output: the value of Dmax for each of them. 
 
-Variant of the previous program where the results are obtained applying a branch & bound technique over the implicit tree.
+The results are obtained applying a branch & bound technique over the implicit tree.
 */
 
 int main()
