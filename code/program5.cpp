@@ -7,8 +7,8 @@
 
 using namespace std;
 
-/*  PROGRAM 5:
-
+/*  PROGRAM 5
+    ---------
     Input: various graphs
     Output: the value of Dmax for each of them. 
 
