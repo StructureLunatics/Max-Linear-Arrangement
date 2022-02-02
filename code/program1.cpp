@@ -12,8 +12,7 @@ using namespace std;
     Output: D value
 */
 
-int main()
-{
+int main(){
     // Call Read graph function
     graph g;
     g = ReadGraph();
@@ -28,5 +27,6 @@ int main()
 
     // Print D to standard output
     cout << D << endl;
+    
     return 0;
 }
