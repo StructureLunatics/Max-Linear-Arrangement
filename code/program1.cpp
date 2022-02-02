@@ -14,16 +14,13 @@ using namespace std;
 
 int main(){
     // Call Read graph function
-    graph g;
-    g = ReadGraph();
+    graph g = ReadGraph();
 
     // Call GraphPos function
-    vector<int> pi;
-    pi = GraphPos(g.vertices());
+    vector<int> pi = GraphPos(g.vertices());
 
     // Call Compute D function taking two a graph and vector pi as parameters
-    int D;
-    D = ComputeD(g, pi);
+    int D = ComputeD(g, pi);
 
     // Print D to standard output
     cout << D << endl;

@@ -2,9 +2,6 @@
 #include <numeric>
 #include <vector>
 #include <iostream>
-
-
-
 #include <algorithm>
 #include "graph.hpp"
 #include "graph_utilities.hpp"
@@ -25,19 +22,7 @@ int main(){
     cin >> totalG;
 
     // Initializing a vector to store the Ds
-    vector<int> Dmax_v;
-
-    int myints[] = {1,2,3};
-
-    std::sort (myints,myints+3);
-
-    std::cout << "The 3! possible permutations with 3 elements:\n";
-    do {
-    std::cout << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
-    } while ( std::next_permutation(myints,myints+3) );
-
-    std::cout << "After loop: " << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
-
+    vector<int> AllD;
 
     for(int i = 0; i < totalG; i++){
         // Declare graph object
@@ -45,10 +30,28 @@ int main(){
         // Call ReadGraph function
         g = ReadGraph();
 
+        vector <int> pi(g.vertices());
+        iota(pi.begin(), pi.end(), 0);
+
+        vector<int> AllTempD;
         // Permutate all possible positions
+        do {
+            // Call compute D taking two params (vertices) method
+            int D = ComputeD(g, pi);
+            // Insert the D value inside Dvalues vector
+            AllTempD.push_back(D);
+        } while ( next_permutation(pi.begin(), pi.end()) );
 
-        // Save value from permutation of highest Dmax
+        // Find value from permutation of highest distance
+        int MaxD = *max_element (AllTempD.begin(), AllTempD.end());
 
+        // Save value from permutation of highest distance
+        AllD.push_back(MaxD);
+    }
+
+    // Printing D values to standard output.
+    for(auto i: AllD){
+        cout << i << endl;
     }
 
     return 0;
