@@ -16,6 +16,8 @@ using namespace std;
 The results has to be calculated using an exhaustive enumeration of the n! linear arrangements. 
 */
 
+
+
 int main(){
     // Storing number of graphs we will have to read.
     int AllG;
@@ -33,20 +35,21 @@ int main(){
         vector <int> pi(g.vertices());
         iota(pi.begin(), pi.end(), 0);
 
-        vector<int> AlltmpD;
+        //vector<int> AlltmpD;
+        int Dmax = 0;
         // Permutate all possible positions
         do {
             // Call compute D taking two params (vertices) method
             int D = ComputeD(g, pi);
+            if (D > Dmax){Dmax = D;}
             // Insert the D value inside Dvalues vector
-            AlltmpD.push_back(D);
+            // AlltmpD.push_back(D);
         } while ( next_permutation(pi.begin(), pi.end()) );
 
         // Find value from permutation of highest distance
-        int MaxD = *max_element (AlltmpD.begin(), AlltmpD.end());
-
+        // int MaxD = *max_element (AlltmpD.begin(), AlltmpD.end());
         // Save value from permutation of highest distance
-        AllD.push_back(MaxD);
+        AllD.push_back(Dmax);
     }
 
     // Printing D values to standard output.
