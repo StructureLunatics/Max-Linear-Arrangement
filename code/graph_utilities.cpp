@@ -53,7 +53,7 @@ vector <int> GraphPos(int v){
 // [Compute D taking two params (vertices) method]
 // Inputs: graph g, vector pi
 // Outputs: Max distance
-int ComputeD(graph g, vector<int> pi){
+int ComputeD(graph g, const vector<int>& pi){
     int D = 0;
 
     for (auto i = g.begin(); i != g.end(); ++i){
@@ -61,4 +61,16 @@ int ComputeD(graph g, vector<int> pi){
     }
     
     return D;
+}
+
+
+// [Initialize pi vector from 0 to n-1]
+// Inputs: vertices number n
+// Outputs: pi vector
+vector <int> Pi(int v){
+    // Declaring vector pi with size = number of vertices
+    vector <int> pi(v);
+    // Filling vector pi from 0 to N-1
+    iota(pi.begin(), pi.end(), 0);
+    return pi;
 }

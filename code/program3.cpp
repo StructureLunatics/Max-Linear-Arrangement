@@ -1,11 +1,6 @@
-#include <cmath>
-#include <numeric>
 #include <vector>
-#include <iostream>
-
-
-
 #include <algorithm>
+#include <iostream>
 #include "graph.hpp"
 #include "graph_utilities.hpp"
 
@@ -20,36 +15,36 @@ The results has to be calculated using an exhaustive enumeration of the n! linea
 */
 
 int main(){
-    // Storing number of graphs we will have to read.
-    int totalG;
-    cin >> totalG;
+    // Read from stdin num of graphs to read.
+    int AllG; 
+    cin >> AllG;
 
-    // Initializing a vector to store the Ds
-    vector<int> Dmax_v;
+    // Declare vector used for storing Dmax for each graph
+    vector<int> AllD;
 
-    int myints[] = {1,2,3};
-
-    std::sort (myints,myints+3);
-
-    std::cout << "The 3! possible permutations with 3 elements:\n";
-    do {
-    std::cout << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
-    } while ( std::next_permutation(myints,myints+3) );
-
-    std::cout << "After loop: " << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
-
-
-    for(int i = 0; i < totalG; i++){
-        // Declare graph object
-        graph g;
-        // Call ReadGraph function
-        g = ReadGraph();
-
+    for(int i = 0; i < AllG; i++){
+        // Create graph object filled by ReadGraph function.
+        graph g = ReadGraph();
+        // Vector pi; size (vertices num); values (0 to n-1).
+        vector <int> pi = Pi(g.vertices());
+        
+        int Dmax = 0;
         // Permutate all possible positions
+        do {
+            // Call compute D taking two params (vertices) method
+            int D = ComputeD(g, pi);
+            // If new D is greater than current Dmax, update Dmax
+            if (D > Dmax){Dmax = D;}
+        } while ( next_permutation(pi.begin(), pi.end()) );
 
-        // Save value from permutation of highest Dmax
-
+        // Save value from graph permutation of max distance
+        AllD.push_back(Dmax);
     }
 
+    // Printing Dmax of each graph to stdout
+    for(auto D: AllD){
+        cout << D << endl;
+    }
+    
     return 0;
 }

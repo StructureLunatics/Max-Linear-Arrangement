@@ -1,5 +1,3 @@
-#include <cmath>
-#include <numeric>
 #include <vector>
 #include <iostream>
 #include "graph.hpp"
@@ -14,30 +12,27 @@ using namespace std;
 */
 
 int main(){
-    // Storing number of graphs we will have to read.
-    int totalG;
-    cin >> totalG;
+    // Read from stdin num of graphs to read.
+    int AllG; 
+    cin >> AllG;
 
-    // Initializing a vector to store the Ds
-    vector<graph> graphs;
+    // Declare vector used for storing Dmax for each graph
+    vector<int> AllD;
 
-    for(int i = 0; i < totalG; i++){
-        // Declare graph object
-        graph g;
-        // Call ReadGraph function
-        g = ReadGraph();
-    }
+    for(int i = 0; i < AllG; i++){
+        // Create graph object filled by ReadGraph function.
+        graph g = ReadGraph();
 
-    // Printing D values to standard output.
-    for(auto g: graphs){
-        // Declaring vector pi with size = number of vertices
-        vector <int> pi(g.vertices());
-        // Filling vector pi from 0 to N-1
-        iota(pi.begin(), pi.end(), 0);
+        // Vector pi; size (vertices num); values (0 to n-1).
+        vector <int> pi = Pi(g.vertices());
         
-        // Call compute D taking two params (vertices) method
-         // & print Dmax to stout
-        cout << ComputeD(g, pi) << endl;
+        // Append to AllD the max Distance of graph with positions pi.
+        AllD.push_back(ComputeD(g, pi));
+    }
+    
+    // Printing Dmax of each graph to stdout
+    for(auto D: AllD){
+        cout << D << endl;
     }
 
     return 0;
