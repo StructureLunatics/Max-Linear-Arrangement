@@ -18,13 +18,13 @@ The results has to be calculated using an exhaustive enumeration of the n! linea
 
 int main(){
     // Storing number of graphs we will have to read.
-    int totalG;
-    cin >> totalG;
+    int AllG;
+    cin >> AllG;
 
     // Initializing a vector to store the Ds
     vector<int> AllD;
 
-    for(int i = 0; i < totalG; i++){
+    for(int i = 0; i < AllG; i++){
         // Declare graph object
         graph g;
         // Call ReadGraph function
