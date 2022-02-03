@@ -15,7 +15,18 @@ using namespace std;
 The results are obtained applying a branch & bound technique over the implicit tree.
 */
 
-int main()
-{
+int main(){
+    // Storing number of graphs we will have to read.
+    int totalG;
+    cin >> totalG;
+
+    // Initializing a vector to store the Ds
+    vector<int> AllD;
+
+    // Printing D values to standard output.
+    for(auto i: AllD){
+        cout << i << endl;
+    }
+
     return 0;
 }
