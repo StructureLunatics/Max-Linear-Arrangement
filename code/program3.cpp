@@ -17,7 +17,6 @@ The results has to be calculated using an exhaustive enumeration of the n! linea
 */
 
 
-
 int main(){
     // Storing number of graphs we will have to read.
     int AllG;
@@ -32,27 +31,24 @@ int main(){
         // Call ReadGraph function
         g = ReadGraph();
 
+        // Declare pi vector and initialize from 0 to g.vertices-1
         vector <int> pi(g.vertices());
         iota(pi.begin(), pi.end(), 0);
 
-        //vector<int> AlltmpD;
         int Dmax = 0;
         // Permutate all possible positions
         do {
             // Call compute D taking two params (vertices) method
             int D = ComputeD(g, pi);
+            // If new D is greater than current Dmax, update Dmax
             if (D > Dmax){Dmax = D;}
-            // Insert the D value inside Dvalues vector
-            // AlltmpD.push_back(D);
         } while ( next_permutation(pi.begin(), pi.end()) );
 
-        // Find value from permutation of highest distance
-        // int MaxD = *max_element (AlltmpD.begin(), AlltmpD.end());
-        // Save value from permutation of highest distance
+        // Save value from graph permutation of max distance
         AllD.push_back(Dmax);
     }
 
-    // Printing D values to standard output.
+    // Printing Dmax of each graph to standard output.
     for(auto i: AllD){
         cout << i << endl;
     }

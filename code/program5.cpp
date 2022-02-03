@@ -17,8 +17,8 @@ The results are obtained applying a branch & bound technique over the implicit t
 
 int main(){
     // Storing number of graphs we will have to read.
-    int totalG;
-    cin >> totalG;
+    int AllG;
+    cin >> AllG;
 
     // Initializing a vector to store the Ds
     vector<int> AllD;
