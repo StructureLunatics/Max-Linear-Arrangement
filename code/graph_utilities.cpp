@@ -62,3 +62,5 @@ int ComputeD(graph g, vector<int> pi){
     
     return D;
 }
+
+// 
