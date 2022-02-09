@@ -5,12 +5,14 @@
 #include "graph_utilities.hpp"
 
 using namespace std;
+vector <int> GraphPos(int v);
 
 /*  PROGRAM 1
     ---------
     Input: single graph, position of the vertices.
     Output: D value
 */
+
 
 int main(){
     // Call Read graph function
@@ -29,4 +31,23 @@ int main(){
     cout << D << endl;
     
     return 0;
+}
+
+
+// [Read vector representing vertex positions]
+// Inputs: vector
+// Output: Pi vector
+vector <int> GraphPos(int v){
+    vector <int> pi;
+
+    // iterate v(number of vertices) times
+    for(int i = 0; i < v; i++){
+        // Read vertex from stdin
+        int vertex;
+        cin >> vertex;
+        pi.push_back(vertex);
+    }
+  
+    // Return vector vith ordered vertices
+    return pi;
 }

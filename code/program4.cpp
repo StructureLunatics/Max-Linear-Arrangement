@@ -18,12 +18,15 @@ The results has to be calculated using a recursive algorithm for the exhaustive 
 
 int RecExplorer(graph g, vector<int>){
     // Base Case
+    
 
     // Else
+    return 0;
 }
 
-void RecExplorerAux(graph g, vector<int>, int i){
-    
+int RecExplorerAux(graph g, vector<int>, int i){
+
+    return 0;
 }
 
 
@@ -36,13 +39,10 @@ int main(){
     vector<int> AllD;
 
     for(int i = 0; i < AllG; i++){
-        // Call ReadGraph function
+        // Create graph object filled by ReadGraph function.
         graph g = ReadGraph();
-
-        // Declare pi vector and initialize from 0 to g.vertices-1
-        vector <int> pi(g.vertices());
-        iota(pi.begin(), pi.end(), 0);
-
+        // Vector pi; size (vertices num); values (0 to n-1).
+        vector <int> pi = Pi(g.vertices());
 
         // Call recursive explorer functioons
         int Dmax = RecExplorer(g, pi);

@@ -32,28 +32,10 @@ graph ReadGraph(){
     return g;
 }
 
-// [Read vector representing vertex positions]
-// Inputs: vector
-// Output: Pi vector
-vector <int> GraphPos(int v){
-    vector <int> pi;
-
-    // iterate v(number of vertices) times
-    for(int i = 0; i < v; i++){
-        // Read vertex from stdin
-        int vertex;
-        cin >> vertex;
-        pi.push_back(vertex);
-    }
-  
-    // Return vector vith ordered vertices
-    return pi;
-}
-
 // [Compute D taking two params (vertices) method]
 // Inputs: graph g, vector pi
 // Outputs: Max distance
-int ComputeD(graph g, const vector<int>& pi){
+int ComputeD(const graph& g, const vector<int>& pi){
     int D = 0;
 
     for (auto i = g.begin(); i != g.end(); ++i){
