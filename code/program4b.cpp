@@ -16,7 +16,7 @@ using namespace std;
 The results has to be calculated using a recursive algorithm for the exhaustive exploration. 
 */
 
-
+/*
 void RecExplorerAux(const graph& g, vector<int>& pi, int& Dmax, int i){
     {
         if (i==0) {
@@ -37,7 +37,7 @@ int RecExplorer(const graph& g, vector<int>& pi){
     RecExplorerAux(g, pi, Dmax, g.vertices());
     return Dmax;
     }
-
+*/
 int main(){
     // Storing number of graphs we will have to read.
     int AllG;

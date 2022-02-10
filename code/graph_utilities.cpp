@@ -37,11 +37,9 @@ graph ReadGraph(){
 // Outputs: Max distance
 int ComputeD(const graph& g, const vector<int>& pi){
     int D = 0;
-
     for (auto i = g.begin(); i != g.end(); ++i){
         D += abs(pi.at(i->first) - pi.at(i->second));
     }
-    
     return D;
 }
 

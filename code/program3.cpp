@@ -16,8 +16,8 @@ The results has to be calculated using an exhaustive enumeration of the n! linea
 
 int main(){
     // Read from stdin num of graphs to read.
-    int AllG; 
-    cin >> AllG;;
+    int AllG;
+    cin >> AllG;
 
     for(int i = 0; i < AllG; i++){
         // Create graph object filled by ReadGraph function.

@@ -1,5 +1,4 @@
-./test.sh: line 15: test/program2/godzilla6.txt: No such file or directory
 
-real	0m0,001s
-user	0m0,001s
-sys	0m0,000s
+real	0m0,244s
+user	0m0,239s
+sys	0m0,004s
