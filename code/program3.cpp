@@ -42,9 +42,7 @@ int main(){
     }
 
     // Printing Dmax of each graph to stdout
-    for(auto D: AllD){
-        cout << D << endl;
-    }
+    display(AllD);
     
     return 0;
 }

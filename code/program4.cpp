@@ -1,6 +1,7 @@
 #include <cmath>
 #include <numeric>
 #include <vector>
+#include <algorithm>
 #include <iostream>
 #include "graph.hpp"
 #include "graph_utilities.hpp"
@@ -16,19 +17,27 @@ The results has to be calculated using a recursive algorithm for the exhaustive 
 */
 
 
-int RecExplorer(graph g, vector<int>){
-    // Base Case
-    
-
-    // Else
-    return 0;
+void RecExplorerAux(const graph& g, vector<int>& pi, vector<int>& Ds, int i){
+    {
+        if (i==0) {
+            int D = ComputeD(g, pi);
+            Ds.push_back(D);
+        } else {
+            for (int j=0; j<i; j++) {
+                swap(pi[j], pi[i-1]);
+                RecExplorerAux(g, pi, Ds, i-1);
+                swap(pi[j], pi[i-1]);
+            }
+        }
+    }
 }
 
-int RecExplorerAux(graph g, vector<int>, int i){
-
-    return 0;
-}
-
+int RecExplorer(const graph& g, vector<int>& pi){
+    vector<int> Ds = {};
+    RecExplorerAux(g, pi, Ds, g.vertices());
+    int Dmax = *max_element(Ds.begin(), Ds.end());
+    return Dmax;
+    }
 
 int main(){
     // Storing number of graphs we will have to read.
@@ -46,16 +55,12 @@ int main(){
 
         // Call recursive explorer functioons
         int Dmax = RecExplorer(g, pi);
-
         // Store Dmax into AllD vector
         AllD.push_back(Dmax);
     }
 
-
     // Printing D values to standard output.
-    for(auto i: AllD){
-        cout << i << endl;
-    }
+    display(AllD);
 
     return 0;
 }

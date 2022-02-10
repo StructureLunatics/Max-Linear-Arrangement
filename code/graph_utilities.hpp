@@ -11,6 +11,7 @@ using namespace std;
 graph ReadGraph();
 int ComputeD(const graph& g, const vector<int>& pi);
 vector <int> Pi(int v);
+void display(vector <int> v);
 
 #endif
 

@@ -56,3 +56,9 @@ vector <int> Pi(int v){
     iota(pi.begin(), pi.end(), 0);
     return pi;
 }
+
+void display(vector <int> v){
+    for(auto i: v){
+        cout << i << endl;
+    }
+}
