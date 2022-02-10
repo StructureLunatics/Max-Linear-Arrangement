@@ -1,20 +1,39 @@
-# [ ADS ] Maximum Linear Arrangement
-Dante Aviño, Miguel Borge
+# REPORT: Maximum Linear Arrangement
 
 
 
-## Report
+Dante Aviñó, Miguel Borge
 
-### Choices and difficulties
+---
 
+### 1. Choices and difficulties
 
-### Ideas or tricks you have applied to improve efficiency of the algorithms
-
-
-### Branch & Bound technique
+- Using pointers
 
 
-### Complete Table 1, specifying running time & PC specifications
+
+### 2. Ideas or tricks you have applied to improve efficiency of the algorithms
+
+- Create a vector containing the computed distances of each graph is more efficient
 
 
-### Discussion of the results on the execution time in Table 1
+
+### 3. Branch & Bound technique
+
+- WTF
+
+
+
+### 4. Running time & PC specifications
+
+| Program | Compilation | Test suit | t_i  | r_i  |
+| :-----: | :---------: | :-------: | :--: | :--: |
+|    1    |     YES     |   $1600   |      |      |
+|    2    |     YES     |    $12    |      |      |
+|    3    |     YES     |    $1     |      |      |
+|    4    |     YES     |           |      |      |
+|    5    |     NO      |           |      |      |
+
+
+
+### 5. Discussion of the results on the execution time in Table 1

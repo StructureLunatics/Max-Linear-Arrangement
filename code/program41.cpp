@@ -55,11 +55,7 @@ int main(){
         // Call recursive explorer functioons
         int Dmax = RecExplorer(g, pi);
         // Store Dmax into AllD vector
-        AllD.push_back(Dmax);
+        cout << Dmax << endl;
     }
-
-    // Printing D values to standard output.
-    display(AllD);
-
     return 0;
 }

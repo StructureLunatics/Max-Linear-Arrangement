@@ -57,6 +57,10 @@ vector <int> Pi(int v){
     return pi;
 }
 
+
+// [Print vector to stdout]
+// Inputs: vector of integers
+// Outputs: none
 void display(vector <int> v){
     for(auto i: v){
         cout << i << endl;
