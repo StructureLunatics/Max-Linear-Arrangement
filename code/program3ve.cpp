@@ -17,7 +17,10 @@ The results has to be calculated using an exhaustive enumeration of the n! linea
 int main(){
     // Read from stdin num of graphs to read.
     int AllG; 
-    cin >> AllG;;
+    cin >> AllG;
+
+    // Declare vector used for storing Dmax for each graph
+    vector<int> AllD;
 
     for(int i = 0; i < AllG; i++){
         // Create graph object filled by ReadGraph function.
@@ -34,9 +37,12 @@ int main(){
             if (D > Dmax){Dmax = D;}
         } while ( next_permutation(pi.begin(), pi.end()) );
 
-        // Print Dmax to stdout
-        cout << Dmax << endl;
+        // Save value from graph permutation of max distance
+        AllD.push_back(Dmax);
     }
+
+    // Printing Dmax of each graph to stdout
+    display(AllD);
     
     return 0;
 }

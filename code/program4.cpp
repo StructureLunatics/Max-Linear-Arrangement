@@ -43,9 +43,6 @@ int main(){
     int AllG;
     cin >> AllG;
 
-    // Initializing a vector to store the Ds
-    vector<int> AllD;
-
     for(int i = 0; i < AllG; i++){
         // Create graph object filled by ReadGraph function.
         graph g = ReadGraph();
@@ -55,11 +52,7 @@ int main(){
         // Call recursive explorer functioons
         int Dmax = RecExplorer(g, pi);
         // Store Dmax into AllD vector
-        AllD.push_back(Dmax);
+        cout << Dmax << endl;
     }
-
-    // Printing D values to standard output.
-    display(AllD);
-
     return 0;
 }
